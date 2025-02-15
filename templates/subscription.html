@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .pricing-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 250px;
+      border: 2px solid transparent;
+    }
+    .pricing-card.recommended {
+      border: 2px solid #007bff;
+    }
+    .pricing-card h3 {
+      margin-bottom: 10px;
+    }
+    .pricing-card p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    .pricing-card button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .pricing-card button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Choose Your Plan</h2>
+  <div class="pricing-container">
+    <div class="pricing-card">
+      <h3>Basic</h3>
+      <p>$0 / month</p>
+      <ul>
+        <li>Access to basic features</li>
+        <li>Limited resources</li>
+      </ul>
+      <button>Get Started</button>
+    </div>
+    <div class="pricing-card recommended">
+      <h3>Pro</h3>
+      <p>$19.99 / month</p>
+      <ul>
+        <li>Access to all features</li>
+        <li>Priority support</li>
+      </ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="pricing-card">
+      <h3>Enterprise</h3>
+      <p>Custom Pricing</p>
+      <ul>
+        <li>Custom solutions</li>
+        <li>Dedicated support</li>
+      </ul>
+      <button>Contact Us</button>
+    </div>
+  </div>
+</body>
+</html>
