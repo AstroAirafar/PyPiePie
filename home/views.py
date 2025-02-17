@@ -1,4 +1,20 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect, HttpResponse
+from .forms import UserForm
+from django.contrib import messages
+
+def register(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Registration successful!')
+            return redirect('register')
+        else:
+            messages.error(request, 'Please correct the errors below.')
+    else:
+        form = UserForm()
+    return render(request, 'register.html', {'form': form})
+
 
 def index(request):
     context = {
@@ -14,9 +30,6 @@ def services(request):
 
 def contact(request):
     return render(request, 'contact.html')
-
-def registration(request):
-    return render(request, 'registration.html')
 
 def login(request):
     return render(request, 'login.html')
