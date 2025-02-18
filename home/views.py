@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .forms import UserForm
 from django.contrib import messages
+from django.contrib.auth import authenticate, login
+from django.http import JsonResponse
+from .models import ContactMessage
 
 def register(request):
     if request.method == 'POST':
@@ -15,6 +18,19 @@ def register(request):
         form = UserForm()
     return render(request, 'register.html', {'form': form})
 
+def login(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=email, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('index')
+        else:
+            messages.error(request, 'Invalid email or password.')
+    
+    return render(request, 'login.html')
 
 def index(request):
     context = {
@@ -22,17 +38,28 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        try:
+            contact_message = ContactMessage(name=name, email=email, message=message)
+            contact_message.save()
+            return JsonResponse({'success': True, 'message': 'Message sent successfully and saved to the database!'})
+        except Exception as e:
+            return JsonResponse({'success': False, 'message': f"An error occurred: {str(e)}"})
+
+    return render(request, 'contact.html')
+
+
 def about(request):
     return render(request, 'about.html')
 
 def services(request):
     return HttpResponse("This is services page.")
 
-def contact(request):
-    return render(request, 'contact.html')
-
-def login(request):
-    return render(request, 'login.html')
 
 def faqs(request):
     return render(request, 'faqs.html')
