@@ -1,0 +1,163 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../assets/body-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+p {
+    line-height: 200px;
+    font-family: "Seymour One", sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(white, rgb(40, 167, 148)) text;
+    -webkit-text-stroke: 1px rgb(40, 167, 148);
+}
+
+/* Navbar styles */
+.navbar {
+    line-height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 32px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    list-style-type: none;
+    gap: 15px;
+    padding: 0;
+}
+
+.navbar li {
+    text-align: center;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    color: #1C7164;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-button {
+    background-color: #EFC595;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 12px #CCA980;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.nav-button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.466);
+}
+
+.nav-button:focus {
+    outline: none;
+}
+
+/* Start button styles */
+.start-button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    font-family: "Seymour One";
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.start-button-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.start-button-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left, hsl(340deg 100% 16%) 0%, rgb(40, 167, 148), rgb(40, 167, 148), hsl(340deg 100% 16%) 100%);
+}
+
+.start-button-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: rgb(40, 167, 148);
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+    .start-button-front {
+        font-size: 1.25rem;
+        padding: 12px 42px;
+    }
+}
+
+.start-button:hover {
+    filter: brightness(110%);
+}
+
+.start-button:hover .start-button-front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.start-button:active .start-button-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.start-button:hover .start-button-shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.start-button:active .start-button-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.start-button:focus:not(:focus-visible) {
+    outline: none;
+}

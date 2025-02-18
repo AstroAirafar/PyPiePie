@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Seymour+One" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <title>PyPiePie</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-button"><a href="{% static 'assets/Tutorials.png' %}">Tutorials</a></li>
+            <li class="nav-button"><a href="{% static 'assets/Leaderboard.png' %}">Leaderboard</a></li>
+            <li class="nav-button"><a href="{% static 'assets/FAQS.png' %}">FAQS</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div>
+        <p>LET'S HAVE SOME FUN</p>
+    </div>
+    <center>
+        <button class="start-button" role="button">
+            <span class="start-button-shadow"></span>
+            <span class="start-button-edge"></span>
+            <span class="start-button-front text">
+                START
+            </span>
+        </button>
+    </center>
+</body>
+
+</html>

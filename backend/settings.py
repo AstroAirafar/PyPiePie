@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-1!%)c6^_m+w4+6%7w65^lpi2cwmb!m0_96s_ax09!2q1=%^34a'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'AstroAirafar.pythonanywhere.com']
 
@@ -85,9 +85,10 @@ USE_I18N = True
 USE_TZ = True
 
 # ✅ Static files settings
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']  # ✅ Fixed
 STATIC_ROOT = BASE_DIR / "staticfiles"  # ✅ Added for deployment
+
 
 # ✅ Media files settings (for file uploads)
 MEDIA_URL = '/media/'
@@ -95,3 +96,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ['https://AstroAirafar.pythonanywhere.com']
