@@ -10,6 +10,7 @@ admin.site.index_title = "Welcome to PyPiePie Admin Portal"
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("level", views.level, name="level"),
     path("index", views.index, name="index"),
     path("about", views.about, name="about"),
     path("services", views.services, name="services"),

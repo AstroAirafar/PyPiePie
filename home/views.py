@@ -35,6 +35,9 @@ def login(request):
 def home(request):
     return render(request, 'home.html')
 
+def level(request):
+    return render(request, 'level.html')
+
 def index(request):
     context = {
         "variable" : "Hello, World!"
