@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from .models import ContactMessage
 
+
 def register(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
