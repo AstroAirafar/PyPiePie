@@ -168,9 +168,7 @@ Yes! The platform is designed to be mobile-friendly, and we’re working on a de
 ---
 
 ## 🔗 Stay Connected
-- Join our Discord: *[Coming Soon]*
-- Follow us on Twitter: *[Coming Soon]*
-- Email us: *[Coming Soon]*
+- Email us: *[anandraj18110@gmail.com]*
 
 ---
 
