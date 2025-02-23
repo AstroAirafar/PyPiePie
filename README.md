@@ -7,12 +7,14 @@
 ![GitHub stars](https://img.shields.io/github/stars/AstroAirafar/PyPiePie?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/AstroAirafar/PyPiePie?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/AstroAirafar/PyPiePie)
+![GitHub issues closed](https://img.shields.io/github/issues-closed/AstroAirafar/PyPiePie)
 ![GitHub license](https://img.shields.io/github/license/AstroAirafar/PyPiePie)
 ![GitHub contributors](https://img.shields.io/github/contributors/AstroAirafar/PyPiePie)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AstroAirafar/PyPiePie)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/AstroAirafar/PyPiePie)
+![GitHub pull requests closed](https://img.shields.io/github/issues-pr-closed/AstroAirafar/PyPiePie)
 ![GitHub repo size](https://img.shields.io/github/repo-size/AstroAirafar/PyPiePie)
-![GitHub issues closed](https://img.shields.io/github/issues-closed/AstroAirafar/PyPiePie)
+
 
 ---
 
