@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/AstroAirafar/PyPiePie/blob/main/Resources/pics/Logo-PyPiePie.jpg" width="100%">
+  <img src="https://github.com/AstroAirafar/PyPiePie/blob/main/Resources/pics/PyPiePie_Logo.png" width="100%">
 </p>
 
 # PyPiePie: Revolutionizing Python Learning with Gamification
