@@ -115,7 +115,7 @@ We follow these conventions to maintain **code quality and consistency**:
 ---
 
 ## 📚 Resources
-- 📄 [Project Documentation](docs/README.md)  
+- 📄 [Project README](README.md)  
 - 🐛 [Issue Tracker](../../issues)  
 - 💬 [Discussion Forum](../../discussions)  
 
