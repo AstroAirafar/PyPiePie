@@ -4,7 +4,8 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from .models import ContactMessage
-
+import logging
+logging.basicConfig(level=logging.ERROR)
 
 def register(request):
     if request.method == 'POST':
@@ -56,7 +57,8 @@ def contact(request):
             contact_message.save()
             return JsonResponse({'success': True, 'message': 'Message sent successfully and saved to the database!'})
         except Exception as e:
-            return JsonResponse({'success': False, 'message': f"An error occurred: {str(e)}"})
+            logging.error("An error occurred while saving the contact message", exc_info=True)
+            return JsonResponse({'success': False, 'message': "An internal error has occurred. Please try again later."})
 
     return render(request, 'contact.html')
 
