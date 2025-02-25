@@ -9,14 +9,15 @@ admin.site.site_title = "PyPiePie Admin Portal"
 admin.site.index_title = "Welcome to PyPiePie Admin Portal"
 
 urlpatterns = [
-    path("", views.home, name="home"),
+    path("", views.user_login, name="login"),
+    path("home", views.home, name="home"),
     path("level", views.level, name="level"),
     path("index", views.index, name="index"),
     path("about", views.about, name="about"),
     path("services", views.services, name="services"),
     path("contact", views.contact, name="contact"),
     path("register", views.register, name="register"),
-    path("login", views.login, name="login"),
+    # path("login", views.user_login, name="login"),
     path("faqs", views.faqs, name="faqs"),
     path("terms", views.terms, name="terms"),
     path("errorpage", views.errorpage, name="errorpage"),
