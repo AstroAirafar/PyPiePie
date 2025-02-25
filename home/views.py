@@ -95,6 +95,9 @@ def services(request):
 def faqs(request):
     return render(request, 'faqs.html')
 
+def leaderboard(request):
+    return render(request, 'leaderboard.html')
+
 def terms(request):
     return render(request, 'terms.html')
 
