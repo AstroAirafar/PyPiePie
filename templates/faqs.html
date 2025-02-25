@@ -5,68 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ Page</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f8f9fa;
-    }
     .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .faq {
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background: #fff;
-    }
-    .faq-question {
-      padding: 15px;
-      cursor: pointer;
-      font-weight: bold;
-      background: #007bff;
-      color: #fff;
-      border-radius: 5px 5px 0 0;
-    }
-    .faq-question:hover {
-      background: #0056b3;
-    }
-    .faq-answer {
-      padding: 15px;
-      display: none;
-      background: #f1f1f1;
+    .faq-container img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
   <div class="faq-container">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq">
-      <div class="faq-question">What is PyPiePie?</div>
-      <div class="faq-answer">PyPiePie is a platform to enhance coding skills with personalized AI recommendations and challenges.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-question">How can I register?</div>
-      <div class="faq-answer">You can register by visiting the Registration page and filling in your details.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-question">Is there a free plan?</div>
-      <div class="faq-answer">Yes, PyPiePie offers a free plan with access to basic features.</div>
-    </div>
+    <img src="/static/assets/FAQS-design.png" alt="FAQs Design">
   </div>
-  <script>
-    const faqs = document.querySelectorAll('.faq-question');
-    faqs.forEach(faq => {
-      faq.addEventListener('click', () => {
-        const answer = faq.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-  </script>
 </body>
 </html>

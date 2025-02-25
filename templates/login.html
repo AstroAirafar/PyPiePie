@@ -1,4 +1,4 @@
-<form id="loginForm" method="POST" action="{% url 'login' %}">
+{% comment %} <form id="loginForm" method="POST" action="{% url 'login' %}">
   {% csrf_token %}
   <div class="form-group">
     <label for="email">Email</label>
@@ -14,4 +14,39 @@
   <div class="form-group">
     <button type="submit">Login</button>
   </div>
-</form>
+</form> {% endcomment %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'styles-login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="heading-line">DIVE RIGHT IN!!</div>
+        <form id="loginForm" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <div class="forgot-password">
+                <a href="#" style="font-family: 'Oregano', serif; color: #5a3e1b; text-decoration: none; font-size: 18px;">Forgot Password?</a>
+            </div>
+            <div class="buttons">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <br>
+        <div class="buttons">
+            <button onclick="window.location.href='register'">Create Account</button>
+        </div>
+    </div>
+</body>
+</html>

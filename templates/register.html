@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,5 +15,36 @@
     {% for message in messages %}
         <p>{{ message }}</p>
     {% endfor %}
+</body>
+</html> {% endcomment %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{% static 'styles-register.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="heading-line">DIVE RIGHT IN!!</div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="buttons">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        {% for message in messages %}
+            <p style="font-family: 'Oregano', serif; color: #5a3e1b; text-align: center;">{{ message }}</p>
+        {% endfor %}
+    </div>
 </body>
 </html>
