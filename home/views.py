@@ -17,14 +17,13 @@ def register(request):
         form = UserForm(request.POST)
         if form.is_valid():
             try:
-                # Check if a user with the email already exists
                 email = form.cleaned_data.get('email')
                 if User.objects.filter(email=email).exists():
                     messages.error(request, 'A user with this email already exists.')
                 else:
                     form.save()
                     messages.success(request, 'Registration successful! Please login.')
-                    return redirect('login')  # Redirect to login page
+                    return redirect('login')
             except IntegrityError:
                 messages.error(request, 'An error occurred. Please try again.')
         else:
@@ -40,13 +39,11 @@ def user_login(request):
         password = request.POST.get('password')
 
         try:
-            # Check if a user with this email exists
             user = User.objects.get(email=email)
-            # Authenticate the user using their username
             user = authenticate(request, username=user.username, password=password)
             if user is not None:
-                auth_login(request, user)  # Log the user in
-                return redirect('home')  # Redirect to home page
+                auth_login(request, user)
+                return redirect('home')
             else:
                 messages.error(request, 'Invalid password. Please try again.')
         except User.DoesNotExist:
@@ -54,7 +51,6 @@ def user_login(request):
             return redirect('register')
 
     return render(request, 'login.html')
-
 
 def home(request):
     return render(request, 'home.html')

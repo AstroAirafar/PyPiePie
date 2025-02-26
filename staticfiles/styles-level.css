@@ -104,7 +104,7 @@ body {
 
 .ladder-container {
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
 
@@ -128,5 +128,4 @@ body {
 .arrow-img:hover {
     opacity: 1;
     transform: scale(1.2);
-}
 }
