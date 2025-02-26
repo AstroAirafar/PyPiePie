@@ -24,6 +24,10 @@ urlpatterns = [
     path("subscription", views.subscription, name="subscription"),
     path("preferences", views.preferences, name="preferences"),
     path("feedback", views.feedback, name="feedback"),
+    path("p1s1", views.p1s1, name="p1s1"),
+    path("p1s2", views.p1s2, name="p1s2"),
+    path("p1s3", views.p1s3, name="p1s3"),
+    path("p1s4", views.p1s4, name="p1s4"),
 ]
 
 

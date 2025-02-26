@@ -94,6 +94,18 @@ def faqs(request):
 def leaderboard(request):
     return render(request, 'leaderboard.html')
 
+def p1s1(request):
+    return render(request, 'p1s1.html')
+
+def p1s2(request):
+    return render(request, 'p1s2.html')
+
+def p1s3(request):
+    return render(request, 'p1s3.html')
+
+def p1s4(request):
+    return render(request, 'p1s4.html')
+
 def terms(request):
     return render(request, 'terms.html')
 
